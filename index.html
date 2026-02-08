@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co-Pilot Shivani Sharma Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cockpit-overlay"></div>
+  
+  <main class="dashboard">
+    <!-- Header Section -->
+    <header class="header">
+      <div class="header-content">
+        <div class="flight-badge">✈️ FLIGHT UP37S1419</div>
+        <h1 class="title">Co-Pilot Shivani Sharma Dashboard</h1>
+        
+        <div class="crew-roster">
+          <div class="crew-card">
+            <span class="crew-role">Pilot</span>
+            <span class="crew-name">Aashish Bla Bla</span>
+          </div>
+          <div class="crew-card accent">
+            <span class="crew-role">Co-Pilot</span>
+            <span class="crew-name">CA Sahab</span>
+            <span class="crew-alias">aka Co-Pilot Sahab</span>
+          </div>
+        </div>
+        
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Birthday Mode Activated 🎉
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats Cards -->
+    <section class="stats-grid">
+      <article class="stat-card">
+        <div class="stat-icon">⏰</div>
+        <h3>Punctuality</h3>
+        <p class="stat-value">Always On Time</p>
+        <p class="stat-note">Shivani Standard Time (SST)</p>
+      </article>
+      
+      <article class="stat-card warning">
+        <div class="stat-icon">🧭</div>
+        <h3>Navigation Skills</h3>
+        <p class="stat-value">Route-Challenged</p>
+        <p class="stat-note">Struggles with knowing & understanding routes. GPS is the real co-pilot.</p>
+      </article>
+      
+      <article class="stat-card danger">
+        <div class="stat-icon">🚶‍♀️</div>
+        <h3>Road Crossing Ability</h3>
+        <p class="stat-value">High-Risk</p>
+        <p class="stat-note">Assistance recommended. Pilot escort on standby.</p>
+      </article>
+      
+      <article class="stat-card">
+        <div class="stat-icon">🗣️</div>
+        <h3>Communication Mode</h3>
+        <p class="stat-value">Yapper Mode ON</p>
+        <p class="stat-note">Mute button missing. Factory defect.</p>
+      </article>
+      
+      <article class="stat-card highlight">
+        <div class="stat-icon">🍿</div>
+        <h3>Snack Supply</h3>
+        <p class="stat-value">Ram Laddu & Chips</p>
+        <p class="stat-note">Always available. Pilot happiness: MAX.</p>
+      </article>
+    </section>
+
+    <!-- Activity Log -->
+    <section class="activity-section">
+      <h2 class="section-title">📋 Flight Activity Log</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="time">09:20</span>
+          <span class="event">Departure. ETA: 10:00 (optimistic)</span>
+          <span class="tag">DEPART</span>
+        </div>
+        <div class="timeline-item">
+          <span class="time">09:45</span>
+          <span class="event">"Sorry!" protocol initiated. Stress level: rising.</span>
+          <span class="tag">😰</span>
+        </div>
+        <div class="timeline-item">
+          <span class="time">09:50</span>
+          <span class="event">Boss anxiety: "He's gonna be mad." Again.</span>
+          <span class="tag">😰</span>
+        </div>
+        <div class="timeline-item">
+          <span class="time">10:00</span>
+          <span class="event">"It's not my fault— it's the traffic!" Evidence: 100% traffic. 0% her.</span>
+          <span class="tag">DEFENSE</span>
+        </div>
+        <div class="timeline-item">
+          <span class="time">10:10</span>
+          <span class="event">"Why is there a goddamn red light?" — Road infrastructure under audit.</span>
+          <span class="tag">🚦</span>
+        </div>
+        <div class="timeline-item">
+          <span class="time">10:25</span>
+          <span class="event">"Tomorrow I'll come early. On time. Promise." — Filed for next-day verification.</span>
+          <span class="tag">VOW</span>
+        </div>
+        <div class="timeline-item actual">
+          <span class="time">10:30</span>
+          <span class="event">Touchdown at her office. SST variance: +30 min.</span>
+          <span class="tag">LATE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internal Audit Report -->
+    <section class="audit-section">
+      <h2 class="section-title">🧾 Internal Audit Report</h2>
+      <div class="audit-card">
+        <div class="audit-header">
+          <span class="audit-id">REF: CA-2025-BDAY</span>
+          <span class="audit-date">Audit Date: Today</span>
+        </div>
+        <div class="audit-body">
+          <p><strong>Audit Scope:</strong> Friendship & Daily Commute</p>
+          <p><strong>Findings:</strong></p>
+          <ul>
+            <li>Late arrival</li>
+            <li>Bad direction sense</li>
+            <li>Risky road crossing</li>
+            <li>Nonstop talking</li>
+            <li>Excellent snack supply</li>
+          </ul>
+          <div class="audit-opinion">
+            <strong>Final Opinion:</strong><br>
+            <em>"Despite operational inefficiencies, the co-pilot is irreplaceable. Birthday celebration approved without conditions."</em>
+          </div>
+          <p class="audit-action-line">Pls find a date for pre-closure of the comments. (Management response ETA: never — we're optimists.)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Birthday Message -->
+    <section class="message-section" id="birthdayMessage">
+      <div class="message-card">
+        <h2>💬 Final Transmission</h2>
+        <p>To our CA who audits numbers by day — thank you for every ride, every Ram Laddu run, and every conversation that never quite ends.</p>
+        <p>You make the commute worth it. Happy Birthday, Best Co-Pilot Ever ✈️🎂</p>
+        <p class="sign-off">— Pilot</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Built with 💙 by Pilot • Flight UP37S1419 • Best Co-Pilot Division</p>
+    </footer>
+  </main>
+
+  <canvas id="confetti-canvas"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
