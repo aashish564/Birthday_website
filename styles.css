@@ -212,11 +212,15 @@ body {
   animation: cardPopIn 0.5s ease-out both;
 }
 
-.stat-card:nth-child(1) { animation-delay: 0.1s; }
-.stat-card:nth-child(2) { animation-delay: 0.15s; }
-.stat-card:nth-child(3) { animation-delay: 0.2s; }
-.stat-card:nth-child(4) { animation-delay: 0.25s; }
-.stat-card:nth-child(5) { animation-delay: 0.3s; }
+.stat-card:nth-child(1) { animation-delay: 0.05s; }
+.stat-card:nth-child(2) { animation-delay: 0.1s; }
+.stat-card:nth-child(3) { animation-delay: 0.15s; }
+.stat-card:nth-child(4) { animation-delay: 0.2s; }
+.stat-card:nth-child(5) { animation-delay: 0.25s; }
+.stat-card:nth-child(6) { animation-delay: 0.3s; }
+.stat-card:nth-child(7) { animation-delay: 0.35s; }
+.stat-card:nth-child(8) { animation-delay: 0.4s; }
+.stat-card:nth-child(9) { animation-delay: 0.45s; }
 
 .stat-card:hover {
   transform: translateY(-6px) scale(1.02);
@@ -322,6 +326,11 @@ body {
 .timeline-item:nth-child(7) { animation-delay: 0.4s; }
 .timeline-item:nth-child(8) { animation-delay: 0.45s; }
 .timeline-item:nth-child(9) { animation-delay: 0.5s; }
+.timeline-item:nth-child(9) { animation-delay: 0.55s; }
+.timeline-item:nth-child(10) { animation-delay: 0.6s; }
+.timeline-item:nth-child(11) { animation-delay: 0.65s; }
+.timeline-item:nth-child(12) { animation-delay: 0.7s; }
+.timeline-item:nth-child(13) { animation-delay: 0.75s; }
 
 .timeline-item::before {
   content: '';
@@ -377,6 +386,16 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   color: var(--text-muted);
+}
+
+.timeline-divider {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  margin: 1.25rem 0 0.75rem -1.25rem;
+  padding: 0.4rem 0;
+  letter-spacing: 0.1em;
 }
 
 @keyframes timelineSlideIn {
@@ -476,6 +495,14 @@ body {
   color: var(--accent-mint);
 }
 
+.audit-strengths {
+  margin-top: 0.5rem !important;
+}
+
+.audit-strengths li {
+  border-left-color: var(--accent-mint) !important;
+}
+
 .audit-action-line {
   margin-top: 1.25rem;
   padding: 0.75rem 1rem;
@@ -524,6 +551,18 @@ body {
   font-weight: 700 !important;
   color: var(--accent-gold) !important;
   margin-top: 1.5rem !important;
+}
+
+.sign-off-small {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: var(--text-muted) !important;
+  margin-top: 0.5rem !important;
+}
+
+.pilot-highlight {
+  color: var(--accent-gold) !important;
+  font-weight: 700;
 }
 
 /* ========== Footer ========== */
