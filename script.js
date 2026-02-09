@@ -6,6 +6,33 @@
 let confettiRunning = false;
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Get Well section
+  const getWellCard = document.getElementById('getWellCard');
+  const getWellOverlay = document.getElementById('getWellOverlay');
+  const getWellClose = document.getElementById('getWellClose');
+
+  if (getWellCard && getWellOverlay) {
+    getWellCard.addEventListener('click', () => getWellOverlay.classList.add('active'));
+  }
+  if (getWellClose && getWellOverlay) {
+    getWellClose.addEventListener('click', () => {
+      getWellOverlay.classList.remove('active');
+      const gameSection = document.querySelector('.game-section');
+      const gameStartBtn = document.getElementById('gameStartBtn');
+      if (gameSection) {
+        gameSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      if (gameStartBtn) {
+        setTimeout(() => gameStartBtn.click(), 800);
+      }
+    });
+  }
+  if (getWellOverlay) {
+    getWellOverlay.addEventListener('click', (e) => {
+      if (e.target === getWellOverlay) getWellOverlay.classList.remove('active');
+    });
+  }
+
   const messageSection = document.getElementById('birthdayMessage');
   const canvas = document.getElementById('confetti-canvas');
 
