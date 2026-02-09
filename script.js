@@ -4,6 +4,7 @@
  */
 
 let confettiRunning = false;
+let confettiPaused = false;
 
 document.addEventListener('DOMContentLoaded', () => {
   // Get Well section
@@ -17,11 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (getWellClose && getWellOverlay) {
     getWellClose.addEventListener('click', () => {
       getWellOverlay.classList.remove('active');
-      const gameSection = document.querySelector('.game-section');
-      const gameStartBtn = document.getElementById('gameStartBtn');
+      const gameSection = document.querySelector('.games-section');
+      const gameStartBtn = document.getElementById('game2048StartBtn');
       if (gameSection) {
         gameSection.scrollIntoView({ behavior: 'smooth' });
       }
+      document.querySelector('.game-tab[data-game="game2048"]')?.click();
       if (gameStartBtn) {
         setTimeout(() => gameStartBtn.click(), 800);
       }
@@ -34,14 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const messageSection = document.getElementById('birthdayMessage');
+  const gamesSection = document.querySelector('.games-section');
   const canvas = document.getElementById('confetti-canvas');
 
   if (!messageSection || !canvas) return;
 
-  const observer = new IntersectionObserver(
+  const messageObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && !confettiRunning) {
+        if (entry.isIntersecting && !confettiRunning && !confettiPaused) {
           confettiRunning = true;
           startConfetti();
         }
@@ -50,7 +53,17 @@ document.addEventListener('DOMContentLoaded', () => {
     { threshold: 0.3 }
   );
 
-  observer.observe(messageSection);
+  const gamesObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        confettiPaused = entry.isIntersecting;
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  messageObserver.observe(messageSection);
+  if (gamesSection) gamesObserver.observe(gamesSection);
 
   window.addEventListener('resize', () => {
     if (canvas && confettiRunning) {
@@ -92,6 +105,11 @@ function startConfetti() {
   }
 
   function animate(timestamp) {
+    if (confettiPaused) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      requestAnimationFrame(animate);
+      return;
+    }
 
     if (!lastSpawn) lastSpawn = timestamp;
     const elapsed = timestamp - lastSpawn;
