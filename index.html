@@ -38,6 +38,26 @@
       </div>
     </header>
 
+    <!-- Get Well Section -->
+    <section class="getwell-section" id="getWellSection">
+      <div class="getwell-card" id="getWellCard">
+        <div class="getwell-icon">🤒</div>
+        <h3>Co-pilot is down with fever!</h3>
+        <p>Let's cheer them up. Tap to send well wishes 💙</p>
+      </div>
+    </section>
+
+    <!-- Get Well Overlay (shown on click) -->
+    <div class="getwell-overlay" id="getWellOverlay">
+      <div class="getwell-modal">
+        <div class="medicine-animation">💊 🩺 💉</div>
+        <h2>Get Well Soon!</h2>
+        <p>Rest up, take care. The pilot & crew are rooting for you. Back in the cockpit soon! ✈️</p>
+        <p class="getwell-play-msg">Play a quick game to cheer yourself up!</p>
+        <button class="getwell-close" id="getWellClose">Play to Cheer Up! 🎮</button>
+      </div>
+    </div>
+
     <!-- Stats Cards -->
     <section class="stats-grid">
       <article class="stat-card">
@@ -217,6 +237,22 @@
       </div>
     </section>
 
+    <!-- Breakout Game -->
+    <section class="game-section">
+      <h2 class="section-title">🎮 Break the Bricks</h2>
+      <p class="game-subtitle">Score points, break bricks. Pilot-approved time-killer!</p>
+      <div class="game-container">
+        <div class="game-info">
+          <span>Score: <strong id="gameScore">0</strong></span>
+          <span>Level: <strong id="gameLevel">1</strong></span>
+          <span>Lives: <strong id="gameLives">3</strong></span>
+        </div>
+        <div class="game-message" id="gameMessage"></div>
+        <canvas id="breakoutCanvas" width="400" height="500"></canvas>
+        <button class="game-start-btn" id="gameStartBtn">Start Game</button>
+      </div>
+    </section>
+
     <footer class="footer">
       <p>Built with 💙 by Pilot • Flight UP37S1419 • Best Co-Pilot Division</p>
     </footer>
@@ -224,5 +260,6 @@
 
   <canvas id="confetti-canvas"></canvas>
   <script src="script.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
