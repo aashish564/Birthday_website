@@ -237,19 +237,42 @@
       </div>
     </section>
 
-    <!-- Breakout Game -->
-    <section class="game-section">
-      <h2 class="section-title">🎮 Break the Bricks</h2>
-      <p class="game-subtitle">Score points, break bricks. Pilot-approved time-killer!</p>
-      <div class="game-container">
-        <div class="game-info">
-          <span>Score: <strong id="gameScore">0</strong></span>
-          <span>Level: <strong id="gameLevel">1</strong></span>
-          <span>Lives: <strong id="gameLives">3</strong></span>
+    <!-- Games Section -->
+    <section class="games-section">
+      <h2 class="section-title">🎮 Games</h2>
+      <p class="game-subtitle">Pick your poison. Pilot-approved time-killers!</p>
+
+      <!-- Game Tabs -->
+      <div class="game-tabs">
+        <button class="game-tab" data-game="breakout">Break the Bricks</button>
+        <button class="game-tab active" data-game="game2048">2048</button>
+      </div>
+
+      <!-- Breakout Game -->
+      <div class="game-panel" id="breakoutPanel">
+        <div class="game-container">
+          <div class="game-info">
+            <span>Score: <strong id="gameScore">0</strong></span>
+            <span>Level: <strong id="gameLevel">1</strong></span>
+            <span>Lives: <strong id="gameLives">3</strong></span>
+          </div>
+          <div class="game-message" id="gameMessage"></div>
+          <canvas id="breakoutCanvas" width="400" height="500"></canvas>
+          <button class="game-start-btn" id="gameStartBtn">Start Game</button>
         </div>
-        <div class="game-message" id="gameMessage"></div>
-        <canvas id="breakoutCanvas" width="400" height="500"></canvas>
-        <button class="game-start-btn" id="gameStartBtn">Start Game</button>
+      </div>
+
+      <!-- 2048 Game -->
+      <div class="game-panel active" id="game2048Panel">
+        <div class="game-container game-2048-container">
+          <div class="game-info">
+            <span>Score: <strong id="score2048">0</strong></span>
+            <span>Best: <strong id="best2048">0</strong></span>
+          </div>
+          <p class="game-hint">Use arrow keys or swipe to slide tiles. Combine identical numbers to reach 2048!</p>
+          <div class="grid-2048" id="grid2048"></div>
+          <button class="game-start-btn" id="game2048StartBtn">New Game</button>
+        </div>
       </div>
     </section>
 
@@ -261,5 +284,6 @@
   <canvas id="confetti-canvas"></canvas>
   <script src="script.js"></script>
   <script src="game.js"></script>
+  <script src="game2048.js"></script>
 </body>
 </html>
